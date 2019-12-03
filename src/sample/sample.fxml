@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainWindows" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="708.0" prefWidth="917.0" style="-fx-background-color: #2E3345;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane layoutX="17.0" layoutY="56.0" prefHeight="636.0" prefWidth="870.0" style="-fx-background-color: #fafafa;">
+         <children>
+            <SplitPane fx:id="pane" layoutX="14.0" layoutY="6.0" prefHeight="621.0" prefWidth="285.0">
+               <items>
+                  <TreeView fx:id="tree" prefHeight="634.0" prefWidth="287.0" />
+               </items>
+            </SplitPane>
+            <SplitPane fx:id="tab" layoutX="302.0" layoutY="6.0" prefHeight="621.0" prefWidth="581.0">
+               <items>
+                  <SplitPane dividerPositions="0.9440993788819876" orientation="VERTICAL" prefHeight="616.0" prefWidth="571.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="543.0" prefWidth="567.0">
+                           <children>
+                              <TabPane fx:id="tabs" layoutX="-1.0" layoutY="-4.0" prefHeight="581.0" prefWidth="581.0" tabClosingPolicy="UNAVAILABLE" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="17.0" prefWidth="574.0">
+                           <children>
+                              <ButtonBar layoutX="85.0" layoutY="4.0" prefHeight="7.0" prefWidth="491.0">
+                                <buttons>
+                                  <Button fx:id="copyAll" mnemonicParsing="false" prefHeight="36.0" prefWidth="161.0" style="-fx-background-color: #F39C63;" text="Скопировать" textFill="WHITE">
+                                       <font>
+                                          <Font name="Times New Roman" size="14.0" />
+                                       </font></Button>
+                                    <Button fx:id="prev" mnemonicParsing="false" style="-fx-background-color: #F39C63;" text="Пред. страница" textFill="WHITE">
+                                       <font>
+                                          <Font name="Times New Roman" size="14.0" />
+                                       </font></Button>
+                                    <Button fx:id="next" mnemonicParsing="false" style="-fx-background-color: #F39C63;" text="След. страница" textFill="WHITE">
+                                       <font>
+                                          <Font name="Times New Roman" size="14.0" />
+                                       </font></Button>
+                                </buttons>
+                              </ButtonBar>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </items></SplitPane>
+         </children>
+      </AnchorPane>
+      <Button fx:id="search" layoutX="832.0" layoutY="14.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="70.0" style="-fx-background-color: #F39C63;" text="Поиск" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="expansion" layoutX="654.0" layoutY="14.0" prefHeight="33.0" prefWidth="163.0" promptText="Расширение">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="stringSearch" layoutX="202.0" layoutY="14.0" prefHeight="33.0" prefWidth="438.0" promptText="Введите строку для поиска">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="directory" layoutX="18.0" layoutY="14.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="169.0" style="-fx-background-color: #F39C63;" text="Выбор директории" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
